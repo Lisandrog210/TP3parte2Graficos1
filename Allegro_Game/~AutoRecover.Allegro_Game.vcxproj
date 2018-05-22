@@ -80,11 +80,11 @@
     <Link>
       <SubSystem>Console</SubSystem>
       <AdditionalLibraryDirectories>$(SolutionDir)Libraries\allegro_x86\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>allegro-debug.lib;allegro_main-debug.lib;allegro_image-debug.lib;allegro_primitives-debug.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>allegro-debug.lib;allegro-main-debug.lib;allegro-image-debug.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <PostBuildEvent>
-      <Command>COPY "$(SolutionDir)Libraries\allegro_x86\bin\allegro_main-debug-5.1.dll" "$(OutDir)"
-COPY "$(SolutionDir)Libraries\allegro_x86\bin\allegro_image-debug-5.1.dll" "$(OutDir)"
+      <Command>COPY "$(SolutionDir)Libraries\allegro_x86\bin\allegro-main-debug-5.1.dll" "$(OutDir)"
+COPY "$(SolutionDir)Libraries\allegro_x86\bin\allegro-image-debug-5.1.dll" "$(OutDir)"
 COPY "$(SolutionDir)Libraries\allegro_x86\bin\allegro-debug-5.1.dll" "$(OutDir)"</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
@@ -109,11 +109,11 @@ COPY "$(SolutionDir)Libraries\allegro_x86\bin\allegro-debug-5.1.dll" "$(OutDir)"
       <OptimizeReferences>true</OptimizeReferences>
       <SubSystem>Windows</SubSystem>
       <AdditionalLibraryDirectories>$(SolutionDir)Libraries\allegro_x86\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>allegro.lib;allegro_main.lib;allegro_image.lib;allegro_primitives.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>allegro.lib;allegro-main.lib;allegro-image.lib;allegro-primitives.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <PostBuildEvent>
-      <Command>COPY "$(SolutionDir)Libraries\allegro_x86\bin\allegro_main-5.1.dll" "$(OutDir)"
-COPY "$(SolutionDir)Libraries\allegro_x86\bin\allegro_image-5.1.dll" "$(OutDir)"
+      <Command>COPY "$(SolutionDir)Libraries\allegro_x86\bin\allegro-main-5.1.dll" "$(OutDir)"
+COPY "$(SolutionDir)Libraries\allegro_x86\bin\allegro-image-5.1.dll" "$(OutDir)"
 COPY "$(SolutionDir)Libraries\allegro_x86\bin\allegro-5.1.dll" "$(OutDir)"</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
