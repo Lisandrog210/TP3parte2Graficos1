@@ -1,0 +1,16 @@
+
+\Debug
+
+\Release
+
+*.db
+
+\.vs
+
+\x64
+
+\Proyecto\Debug
+
+\Proyecto\Release
+
+\Proyecto\x64
