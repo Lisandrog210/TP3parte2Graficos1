@@ -86,8 +86,9 @@
       <Command>copy "$(SolutionDir)Libraries\allegro_x86\bin\allegro_main-debug-5.1.dll" "$(OutDir)"
 copy "$(SolutionDir)Libraries\allegro_x86\bin\allegro_image-debug-5.1.dll" "$(OutDir)"
 copy "$(SolutionDir)Libraries\allegro_x86\bin\allegro-debug-5.1.dll" "$(OutDir)"
-copy "$(SolutionDir)Assets\meadow.jpg" "$(OutDir)"
-copy "$(SolutionDir)Assets\meadow.jpg" "$(ProjectDir)"</Command>
+xcopy "$(SolutionDir)Assets\" "$(OutDir)"
+xcopy "$(SolutionDir)Assets\" "$(ProjectDir)"
+</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
