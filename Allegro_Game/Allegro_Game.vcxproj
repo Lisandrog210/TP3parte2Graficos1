@@ -83,9 +83,11 @@
       <AdditionalDependencies>allegro-debug.lib;allegro_main-debug.lib;allegro_image-debug.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <PostBuildEvent>
-      <Command>COPY "$(SolutionDir)Libraries\allegro_x86\bin\allegro_main-debug-5.1.dll" "$(OutDir)"
-COPY "$(SolutionDir)Libraries\allegro_x86\bin\allegro_image-debug-5.1.dll" "$(OutDir)"
-COPY "$(SolutionDir)Libraries\allegro_x86\bin\allegro-debug-5.1.dll" "$(OutDir)"</Command>
+      <Command>copy "$(SolutionDir)Libraries\allegro_x86\bin\allegro_main-debug-5.1.dll" "$(OutDir)"
+copy "$(SolutionDir)Libraries\allegro_x86\bin\allegro_image-debug-5.1.dll" "$(OutDir)"
+copy "$(SolutionDir)Libraries\allegro_x86\bin\allegro-debug-5.1.dll" "$(OutDir)"
+copy "$(SolutionDir)Assets\meadow.jpg" "$(OutDir)"
+copy "$(SolutionDir)Assets\meadow.jpg" "$(ProjectDir)"</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -114,7 +116,9 @@ COPY "$(SolutionDir)Libraries\allegro_x86\bin\allegro-debug-5.1.dll" "$(OutDir)"
     <PostBuildEvent>
       <Command>COPY "$(SolutionDir)Libraries\allegro_x86\bin\allegro_main-5.1.dll" "$(OutDir)"
 COPY "$(SolutionDir)Libraries\allegro_x86\bin\allegro_image-5.1.dll" "$(OutDir)"
-COPY "$(SolutionDir)Libraries\allegro_x86\bin\allegro-5.1.dll" "$(OutDir)"</Command>
+COPY "$(SolutionDir)Libraries\allegro_x86\bin\allegro-5.1.dll" "$(OutDir)"
+copy "$(SolutionDir)Assets\meadow.jpg" "$(OutDir)"
+copy "$(SolutionDir)Assets\meadow.jpg" "$(ProjectDir)"</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
