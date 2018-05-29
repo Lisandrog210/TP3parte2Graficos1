@@ -78,9 +78,9 @@
       <PreprocessorDefinitions>DEBUG;_MBCS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
-      <SubSystem>Console</SubSystem>
+      <SubSystem>Windows</SubSystem>
       <AdditionalLibraryDirectories>$(SolutionDir)Libraries\allegro_x86\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>allegro-debug.lib;allegro_main-debug.lib;allegro_image-debug.lib;allegro_primitives-debug.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>allegro-debug.lib;allegro_main-debug.lib;allegro_image-debug.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <PostBuildEvent>
       <Command>COPY "$(SolutionDir)Libraries\allegro_x86\bin\allegro_main-debug-5.1.dll" "$(OutDir)"
@@ -109,7 +109,7 @@ COPY "$(SolutionDir)Libraries\allegro_x86\bin\allegro-debug-5.1.dll" "$(OutDir)"
       <OptimizeReferences>true</OptimizeReferences>
       <SubSystem>Windows</SubSystem>
       <AdditionalLibraryDirectories>$(SolutionDir)Libraries\allegro_x86\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>allegro.lib;allegro_main.lib;allegro_image.lib;allegro_primitives.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>allegro.lib;allegro_main.lib;allegro_image.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <PostBuildEvent>
       <Command>COPY "$(SolutionDir)Libraries\allegro_x86\bin\allegro_main-5.1.dll" "$(OutDir)"
