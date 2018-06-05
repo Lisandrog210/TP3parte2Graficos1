@@ -3,6 +3,6 @@ Observaciones TP3 parte 1 Graficos 1 de Diego Fioretti.
 No se elimina la ventana de consola.
 Libreria cargada no se usa, la elimino. (primitives de allegro).
 Versionado OK.
-Implementacion de Allegro OK.
+Implementacion de Allegro incompleta.
 Falta carga de imágenes, movimiento y colisiones.
 

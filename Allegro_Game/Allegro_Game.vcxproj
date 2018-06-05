@@ -80,14 +80,14 @@
     <Link>
       <SubSystem>Windows</SubSystem>
       <AdditionalLibraryDirectories>$(SolutionDir)Libraries\allegro_x86\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>allegro-debug.lib;allegro_main-debug.lib;allegro_image-debug.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>allegro-debug.lib;allegro_main-debug.lib;allegro_image-debug.lib;allegro_ttf-debug.lib;allegro_font-debug.lib;allegro_primitives-debug.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <PostBuildEvent>
-      <Command>copy "$(SolutionDir)Libraries\allegro_x86\bin\allegro_main-debug-5.1.dll" "$(OutDir)"
-copy "$(SolutionDir)Libraries\allegro_x86\bin\allegro_image-debug-5.1.dll" "$(OutDir)"
-copy "$(SolutionDir)Libraries\allegro_x86\bin\allegro-debug-5.1.dll" "$(OutDir)"
-xcopy "$(SolutionDir)Assets\" "$(OutDir)"
-xcopy "$(SolutionDir)Assets\" "$(ProjectDir)"
+      <Command>copy /y "$(SolutionDir)Libraries\allegro_x86\bin\allegro_main-debug-5.1.dll" "$(OutDir)"
+copy /y "$(SolutionDir)Libraries\allegro_x86\bin\allegro_image-debug-5.1.dll" "$(OutDir)"
+copy /y "$(SolutionDir)Libraries\allegro_x86\bin\allegro-debug-5.1.dll" "$(OutDir)"
+xcopy "$(SolutionDir)Assets\" "$(OutDir)" /y
+xcopy "$(SolutionDir)Assets\" "$(ProjectDir)" /y
 </Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
@@ -112,14 +112,15 @@ xcopy "$(SolutionDir)Assets\" "$(ProjectDir)"
       <OptimizeReferences>true</OptimizeReferences>
       <SubSystem>Windows</SubSystem>
       <AdditionalLibraryDirectories>$(SolutionDir)Libraries\allegro_x86\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>allegro.lib;allegro_main.lib;allegro_image.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>allegro.lib;allegro_main.lib;allegro_image.lib;allegro_ttf.lib;allegro_font.lib;allegro_primitives.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <PostBuildEvent>
-      <Command>COPY "$(SolutionDir)Libraries\allegro_x86\bin\allegro_main-5.1.dll" "$(OutDir)"
-COPY "$(SolutionDir)Libraries\allegro_x86\bin\allegro_image-5.1.dll" "$(OutDir)"
-COPY "$(SolutionDir)Libraries\allegro_x86\bin\allegro-5.1.dll" "$(OutDir)"
-copy "$(SolutionDir)Assets\meadow.jpg" "$(OutDir)"
-copy "$(SolutionDir)Assets\meadow.jpg" "$(ProjectDir)"</Command>
+      <Command>copy "$(SolutionDir)Libraries\allegro_x86\bin\allegro_main-5.1.dll" "$(OutDir)"
+copy "$(SolutionDir)Libraries\allegro_x86\bin\allegro_image-5.1.dll" "$(OutDir)"
+copy "$(SolutionDir)Libraries\allegro_x86\bin\allegro-5.1.dll" "$(OutDir)"
+copy "$(SolutionDir)Libraries\allegro_x86\bin\allegro_font-5.1.dll" "$(OutDir)"
+copy "$(SolutionDir)Libraries\allegro_x86\bin\allegro_ttf-5.1.dll" "$(OutDir)"
+copy "$(SolutionDir)Libraries\allegro_x86\bin\allegro_primitives-5.1.dll" "$(OutDir)"</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
